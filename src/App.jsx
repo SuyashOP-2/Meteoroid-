@@ -14,10 +14,10 @@ import { useThree } from "@react-three/fiber";
 function App() {
   const state = useThree();
   
-  useEffect(() => {
-    state.gl.toneMappingExposure = 5;
-  }, [state.gl]);
 
+  useEffect(() => {
+    state.gl.toneMappingExposure = 10;
+  }, [state.gl]);
   return (
     <>
       <Environment
@@ -32,6 +32,7 @@ function App() {
 
       <PerspectiveCamera makeDefault fov={33} position={[-0.07, 16.41, -24.1]} />
       <OrbitControls target={[0.02, 0.806, 0.427]} maxPolarAngle={Math.PI * 0.45} />
+       <OrbitControls target={[0.02, 0.836, 0.382]} maxPolarAngle={Math.PI * 0.90} />
 
       <NodeToyTick />
 
