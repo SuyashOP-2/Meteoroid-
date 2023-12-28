@@ -51,7 +51,7 @@ function Beam({ geometry, beams_mask, beam_index }) {
           return true;
       });
 
-      // only add the vector if it didn't already exist in the array
+      
       if (idx === -1) vectors.push(vector);
     }
 
